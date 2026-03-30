@@ -1,6 +1,6 @@
 {
 	"manifest_version": 3,
-	"name": "Domain Blocker",
+	"name": "Website Blocker",
 	"description": "Can add domains to block from yourself from accessing. Used to help productivity",
 	"version": "1.0",
 	"icons": {
@@ -9,17 +9,14 @@
 		"128": "images/Cancel128.png"
 	},
 	"permissions": [
-		"activeTab",
-		"scripting",
+		"storage",
 		"declarativeNetRequest"
 	],
-	"host_permissions": ["<all_urls>"],
 	"background": {
-		"service_worker": "service-worker.js",
-		"type": "module"
+		"service_worker": "background.js"
 	},
 	"action": {
-		"default_popup": "popup/index.html",
-		"default_title": "Domain Blocker"
+		"default_popup": "popup/popup.html",
+		"default_title": "Website Blocker"
 	}
 }
